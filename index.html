@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h1>Attendance Calculator</h1>
+    <p class="sub">Figure out your current % and how many classes you can skip or must attend.</p>
+
+    <form id="form">
+      <div class="row">
+        <label>Total Classes</label>
+        <input type="number" id="total" min="0" placeholder="e.g. 60" required>
+      </div>
+      <div class="row">
+        <label>Classes Attended</label>
+        <input type="number" id="attended" min="0" placeholder="e.g. 45" required>
+      </div>
+      <div class="row">
+        <label>Required %</label>
+        <input type="number" id="required" min="1" max="100" value="75" required>
+      </div>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results" class="results hidden">
+      <h2>Results</h2>
+      <p id="current"></p>
+      <p id="advice"></p>
+      <p id="details"></p>
+    </div>
+
+    <footer>
+      <small>Calculate Students Attendence Efficiently</small>
+    </footer>
+  </div>
+</body>
+</html>
